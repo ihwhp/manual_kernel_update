@@ -1,6 +1,6 @@
 {
   "variables": {
-    "artifact_description": "CentOS 7.7 with kernel 5.x",
+    "artifact_description": "CentOS 7.7 with el-kernel 5.17",
     "artifact_version": "7.7.1908",
     "image_name": "centos-7.7"
   },
@@ -53,7 +53,7 @@
 
   "post-processors": [
     {
-      "output": "centos-{{user `artifact_version`}}-kernel-5-x86_64-Minimal.box",
+      "output": "centos-{{user `artifact_version`}}-kernel-5_17-x86_64-Minimal.box",
       "compression_level": "7",
       "type": "vagrant"
     }
