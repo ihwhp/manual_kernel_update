@@ -3,7 +3,7 @@ MACHINES = {
   # VM name "kernel update"
   :"kernel-update" => {
               # VM box
-              :box_name => "centos-7-5.15",
+              :box_name => "hwhp/centos-7-5-17",
               # VM CPU count
               :cpus => 2,
               # VM RAM size (Mb)
@@ -23,6 +23,7 @@ Vagrant.configure("2") do |config|
     config.vm.define boxname do |box|
       # Set VM base box and hostname
       box.vm.box = boxconfig[:box_name]
+      box.vm.box_version = "1.0"
       box.vm.host_name = boxname.to_s
       # Additional network config if present
       if boxconfig.key?(:net)
